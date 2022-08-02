@@ -75,6 +75,9 @@ namespace ImportData
                 case "importregions":
                     EntityProcessor.Process(typeof(Region), xlsxPath, Constants.SheetNames.Regions, extraParameters, ignoreDuplicates, logger);
                     break;
+                case "importcities":
+                    EntityProcessor.Process(typeof(City), xlsxPath, Constants.SheetNames.Cities, extraParameters, ignoreDuplicates, logger);
+                    break;
                 default:
                     break;
             }

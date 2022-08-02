@@ -4,6 +4,8 @@
     public class ICities
     {
         public string Name { get; set; }
+		public IRegions Region { get; set; }
+		public ICountries Country { get; set; }
         public string Status { get; set; }
         public int Id { get; set; }
 

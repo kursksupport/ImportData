@@ -28,6 +28,7 @@ namespace ImportData
       public const string Departments = "Подразделения";
       public const string Employees = "Сотрудники";
       public const string Regions = "Регионы";
+      public const string Cities = "Населенные пункты";
       public const string Companies = "Контрагенты";
       public const string Persons = "Персоны";
       public const string Contracts = "Договоры";
@@ -46,6 +47,7 @@ namespace ImportData
       public const string ImportCompanies = "importcompanies";
       public const string ImportPersons = "importpersons";
       public const string ImportRegions = "importregions";
+      public const string ImportCities = "importcities";
       public const string ImportContracts = "importcontracts";
       public const string ImportSupAgreements = "importsupagreements";
       public const string ImportIncomingLetters = "importincomingletters";
@@ -63,6 +65,7 @@ namespace ImportData
         {ImportCompanies, ImportCompanies},
         {ImportPersons, ImportPersons},
         {ImportRegions, ImportRegions},
+        {ImportCities, ImportCities},
         {ImportContracts, ImportContracts},
         {ImportSupAgreements, ImportSupAgreements},
         {ImportIncomingLetters, ImportIncomingLetters},
