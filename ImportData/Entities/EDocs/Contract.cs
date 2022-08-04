@@ -31,9 +31,11 @@ namespace ImportData
       var exceptionList = new List<Structures.ExceptionsStruct>();
       var variableForParameters = this.Parameters[shift + 0].Trim();
 
+      //номер догвора
       var regNumber = this.Parameters[shift + 0];
       DateTimeOffset regDate = DateTimeOffset.MinValue;
       var style = NumberStyles.Number | NumberStyles.AllowCurrencySymbol;
+      //дата
       var culture = CultureInfo.CreateSpecificCulture("en-GB");
       try
       {
