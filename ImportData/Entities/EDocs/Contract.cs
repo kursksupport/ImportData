@@ -49,11 +49,11 @@ namespace ImportData
       }
 
       variableForParameters = this.Parameters[shift + 2].Trim();
-      var counterparty = BusinessLogic.GetEntityWithFilter<ICounterparties>(c => c.Name == variableForParameters, exceptionList, logger);
+      var counterparty = BusinessLogic.GetEntityWithFilter<ICounterparties>(c => c.TIN == variableForParameters, exceptionList, logger);
 
       if (counterparty == null)
       {
-        var message = string.Format("Не найден контрагент \"{0}\".", this.Parameters[shift + 2]);
+        var message = string.Format("Не найден контрагент c инн \"{0}\".", this.Parameters[shift + 2]);
         exceptionList.Add(new Structures.ExceptionsStruct { ErrorType = Constants.ErrorTypes.Error, Message = message });
         logger.Error(message);
 
@@ -90,7 +90,7 @@ namespace ImportData
       var subject = this.Parameters[shift + 5];
 
       variableForParameters = this.Parameters[shift + 6].Trim();
-      var businessUnit = BusinessLogic.GetEntityWithFilter<IBusinessUnits>(b => b.Name == variableForParameters, exceptionList, logger);
+      var businessUnit = BusinessLogic.GetEntityWithFilter<IBusinessUnits>(b => b.TIN == variableForParameters, exceptionList, logger);
 
       if (businessUnit == null)
       {
